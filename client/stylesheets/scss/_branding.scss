@@ -8,16 +8,16 @@
 //------------------------------
 
 // Primary color of your brand (Used for primary buttons, glows, etc.)
-$brand-primary: #137DC3;
+$brand-primary: rgb(255, 210, 0);
 
 // Secondary color of your brand (used for secondary buttons)
-$brand-secondary: #FFBF0A;
+$brand-secondary: rgb(190, 159, 47);
 
 // Success Buttons
 $brand-success: rgb(46, 204, 113);
 
 // Danger/Negative Buttons
-$brand-danger: #FF490A;
+$brand-danger: rgb(123,123,123);
 
 // Black
 $black: #2d2d2d;
@@ -52,7 +52,7 @@ $github-gray: #e4e4e4;
 }
 
 @mixin logo-font(){
-  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Bungee Hairline', 'Open-Sans', 'Helvetica', sans-serif;
   font-weight: 700;
 }
 
@@ -72,7 +72,7 @@ $github-gray: #e4e4e4;
   // but you should feel free to change this to whatever you want.
 
   // Font color
-  color: white;
+  color: rgb(255, 210, 0);
 
   // Basic white text on brand color:
   // background: $brand-primary;
@@ -89,7 +89,7 @@ $github-gray: #e4e4e4;
 // Banner which appears under the nav, and on each page.
 #banner {
   // Font color
-  color: white;
+  color: rgb(255, 210, 0);
 
   // Single background image covering
   // background: url(/assets/images/background.jpg) no-repeat center center;
