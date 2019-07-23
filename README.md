@@ -151,7 +151,7 @@ Quickstart
 
 #### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ehzhang/HELPq/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Department-of-Decentralization/HELPq/tree/master)
 
 When deploying to Heroku, you **must** set at least the `ROOT_URL` and `ADMIN_PASSWORD` environment variables.
 
