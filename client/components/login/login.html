@@ -13,20 +13,12 @@
 
       <div class="field" id="password-block">
         <label> Password </label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-        />
+        <input type="password" id="password" placeholder="Password" />
       </div>
       <div class="field">
         <button id="login-password" class="fluid primary ui button">
           Login
         </button>
-      </div>
-      <div class="ui toggle checkbox">
-        <input id="mentor-toggle" type="checkbox" name="mentor-toggle" />
-        <label>Mentor Login</label>
       </div>
     </div>
 
@@ -35,11 +27,18 @@
     <button id="login-github" class="fluid github ui button">
       Login with Github
     </button>
+
     {{/if}} {{#if enabled.facebook}}
     <br />
     <button id="login-facebook" class="fluid facebook ui button">
       Login with Facebook
     </button>
     {{/if}}
+
+    <br />
+    <div class="ui toggle checkbox">
+      <input id="mentor-toggle" type="checkbox" name="mentor-toggle" />
+      <label>Mentor Login</label>
+    </div>
   </div>
 </template>
