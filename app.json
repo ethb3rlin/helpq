@@ -2,7 +2,7 @@
     "name": "HELPq",
     "description": "An extensible, customizable real-time queue system",
     "env": {
-        "ROOT_URL": "https://tartanhacks-queue.herokuapp.com/",
+        "ROOT_URL": "https://queue.tartanhacks.com/",
         "ADMIN_PASSWORD": "secret",
         "ADMIN_USERNAME": "admin",
         "DEFAULT_MENTOR": "false",
@@ -10,7 +10,7 @@
         "FACEBOOK_ENABLE": "false",
         "FACEBOOK_SECRET": "facebook-secret",
         "GITHUB_CLIENT_ID": "github-client-id",
-        "GITHUB_ENABLE": "false",
+        "GITHUB_ENABLE": "true",
         "GITHUB_SECRET": "github-secret",
         "GOOGLE_CLIENT_ID": "google-client-id",
         "GOOGLE_ENABLE": "false",
