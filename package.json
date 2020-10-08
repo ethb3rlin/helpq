@@ -1,0 +1,28 @@
+{
+  "name": "HELPq",
+  "version": "1.0.0",
+  "description": "HELPq ======",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "bcrypt": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScottyLabs/HELPq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScottyLabs/HELPq/issues"
+  },
+  "homepage": "https://github.com/ScottyLabs/HELPq#readme"
+}
