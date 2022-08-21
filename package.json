@@ -1,7 +1,7 @@
 {
-  "name": "HELPq",
+  "name": "helpq",
   "version": "1.0.0",
-  "description": "HELPq ======",
+  "description": "helpq",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ScottyLabs/HELPq.git"
+    "url": "git+https://github.com/ethb3rlin/helpq.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ScottyLabs/HELPq/issues"
+    "url": "https://github.com/ethb3rlin/helpq/issues"
   },
-  "homepage": "https://github.com/ScottyLabs/HELPq#readme"
+  "homepage": "https://github.com/ethb3rlin/helpq#readme"
 }
