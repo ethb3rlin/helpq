@@ -1,8 +1,8 @@
 {
-    "name": "HELPq",
+    "name": "helpq",
     "description": "An extensible, customizable real-time queue system",
     "env": {
-        "ROOT_URL": "https://queue.tartanhacks.com/",
+        "ROOT_URL": "https://ask.ethberlin.ooo/",
         "ADMIN_PASSWORD": "secret",
         "ADMIN_USERNAME": "admin",
         "DEFAULT_MENTOR": "false",
@@ -15,7 +15,7 @@
         "GOOGLE_CLIENT_ID": "google-client-id",
         "GOOGLE_ENABLE": "false",
         "GOOGLE_SECRET": "google-secret",
-        "SETTINGS_EXPIRATION_DELAY": "1800000",
+        "SETTINGS_EXPIRATION_DELAY": "3600000",
         "SETTINGS_QUEUE_ENABLED": "true"
     },
     "addons": [

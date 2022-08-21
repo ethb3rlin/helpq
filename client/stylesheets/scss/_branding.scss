@@ -8,7 +8,7 @@
 //------------------------------
 
 // Primary color of your brand (Used for primary buttons, glows, etc.)
-$brand-primary: #C31333;
+$brand-primary: #fcd30b;
 
 // Secondary color of your brand (used for secondary buttons)
 $brand-secondary: #FFBF0A;
@@ -72,7 +72,7 @@ $github-gray: #657ca1;
   // but you should feel free to change this to whatever you want.
 
   // Font color
-  color: white;
+  color: #fcd30b;
 
   // Basic white text on brand color:
   // background: $brand-primary;
@@ -82,14 +82,14 @@ $github-gray: #657ca1;
   // background-size: cover;
 
   // Background image that repeats
-  background: url(/assets/images/cmu.jpg) repeat;
+  background: url(/assets/images/eth0.png) repeat;
 }
 
 
 // Banner which appears under the nav, and on each page.
 #banner {
   // Font color
-  color: white;
+  color: #fcd30b;
 
   // Single background image covering
   // background: url(/assets/images/background.jpg) no-repeat center center;
@@ -99,10 +99,10 @@ $github-gray: #657ca1;
   // background: $brand-primary;
 
   // Repeated Background:
-  background: url(/assets/images/cmu.jpg) repeat;
+  background: url(/assets/images/eth0.png) repeat;
 }
 
 // Footer, which appears on each page.
 footer {
-  color: darken(white, 25%);
+  color: darken(#fcd30b, 25%);
 }

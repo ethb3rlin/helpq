@@ -1,16 +1,35 @@
 // Put any SCSS or CSS here to override styles
-// ETHBerlin Zwei
-#splash {
-    color: rgb(0, 0, 255);
-}
-
 #banner {
     margin-bottom: 12px;
-  
+
     .content {
-        color: black;
+        color: #fcd30b;
         a {
-          color: black;
-        }        
+          color: #fcd30b;
+        }
     }
+
+    .nav {
+        color: #fcd30b;
+        a {
+          color: #fcd30b;
+        }
+    }
+}
+
+.ui.secondary.inverted.menu .link.item, .ui.secondary.inverted.menu a.item {
+    color: #fcd30b!important;
+}
+
+.ui.secondary.inverted.menu .dropdown.item:hover, .ui.secondary.inverted.menu .link.item:hover, .ui.secondary.inverted.menu a.item:hover
+{
+    color: #fcd30b!important;
+}
+
+.ui.inverted.menu .item, .ui.inverted.menu .item > a:not(.ui) {
+    color: #fcd30b!important;
+}
+
+footer a {
+    color: #a18808;
 }

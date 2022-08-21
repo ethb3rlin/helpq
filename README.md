@@ -12,7 +12,6 @@ HELPq was originally built for [HackMIT](https://hackmit.org), but has been used
 
 It is a real-time help queue and mentor management application, targeted at hackathons and classrooms, where there is a need for issues to be claimed and satisfied within minutes. It includes a simple interface for requesting tickets, claiming tickets, administrating users/mentors, and examining metrics.
 
-
 It is built with an emphasis on three fundamental user experiences:
 
 ### Keep it simple
