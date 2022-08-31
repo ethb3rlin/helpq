@@ -45,14 +45,42 @@ $github-gray: #657ca1;
 // the appropriate fonts.
 //------------------------------
 
+@font-face {
+  font-family: DS-Digital;
+  font-weight: 400;
+  src: url(fonts/DS-Digital/DS-Digi.ttf);
+}
+@font-face {
+  font-family: DS-Digital;
+  font-weight: 700;
+  src: url(fonts/DS-Digital/DS-Digib.ttf);
+}
+@font-face {
+  font-family: DS-Digital;
+  font-weight: 400;
+  font-style: italic;
+  src: url(fonts/DS-Digital/DS-Digii.ttf);
+}
+@font-face {
+  font-family: DS-Digital;
+  font-weight: 700;
+  font-style: italic;
+  src: url(fonts/DS-Digital/DS-Digibi.ttf);
+}
+@font-face {
+  font-family: W95FA;
+  font-weight: 400;
+  src: url(fonts/W95FA/w95fa.woff2);
+}
+
 // Styling for the fonts
 @mixin font-stack(){
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'W95FA', 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 300;
 }
 
 @mixin logo-font(){
-  font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'W95FA', 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
   font-weight: 700;
 }
 

@@ -286,14 +286,14 @@ function updateUser(id, profile){
 }
 
 // Only admin can create user accounts
-function createAccount(username, password, profile){
-  // TODO: validate username, password
-  check(username, String);
+function createAccount(email, password, profile){
+  // TODO: validate email, password
+  check(email, String);
   check(password, String);
 
   if (authorized.admin(this.userId)){
     return Accounts.createUser({
-      username: username,
+      email: email,
       password: password,
       profile: profile ? profile : {}
     });

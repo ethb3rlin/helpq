@@ -21,17 +21,25 @@
         </button>
       </div>
     </div>
-
+    
     {{#if enabled.github}}
     <br />
     <button id="login-github" class="fluid github ui button">
       Login with Github
     </button>
+    {{/if}} 
 
-    {{/if}} {{#if enabled.facebook}}
+    {{#if enabled.facebook}}
     <br />
     <button id="login-facebook" class="fluid facebook ui button">
       Login with Facebook
+    </button>
+    {{/if}}
+
+    {{#if enabled.twitter}}
+    <br />
+    <button id="login-twitter" class="fluid twitter ui button">
+      Login with Twitter
     </button>
     {{/if}}
 
