@@ -1,10 +1,10 @@
 // Startup Functions
-Meteor.startup(function(){
+Meteor.startup(function () {
   // Grab the config
   var config = {};
   var configJson;
   try {
-    configJson = Assets.getText('config.json');
+    configJson = Assets.getText("config.json");
   } catch (err) {
     // file doesn't exist, but that's okay
   }
@@ -13,7 +13,7 @@ Meteor.startup(function(){
   }
 
   // environment variables override config file
-  var configTemplate = JSON.parse(Assets.getText('config.json.template'));
+  var configTemplate = JSON.parse(Assets.getText("config.json.template"));
   var envConfigs = readConfigsFromEnv(configTemplate);
   overlay(config, envConfigs);
 
@@ -24,84 +24,90 @@ Meteor.startup(function(){
   ServiceConfiguration.configurations.remove({});
 
   // Add Service Integrations
-  addServiceIntegration('github', config.github);
-  addFacebookIntegration(config.facebook);
-  addServiceIntegration('google', config.google);
+  addServiceIntegration("github", config.github);
+  addTwitterIntegration(config.twitter);
 
   // Add Base Settings
   setBasicSettings(config);
 
-  Accounts.onCreateUser(function(options, user){
-    if (options.profile){
+  Accounts.onCreateUser(function (options, user) {
+    if (options.profile) {
       user.profile = options.profile;
 
-      if (config.defaultMentor){
+      if (config.defaultMentor) {
         user.profile.mentor = true;
       }
     }
 
     return user;
   });
-
 });
 
-function createAdmin(username, password){
+function createAdmin(username, password) {
   var user = Meteor.users.findOne({
-    username: username
+    username: username,
   });
 
-  if (!user){
+  if (!user) {
     user = Accounts.createUser({
       username: username,
       password: password,
       profile: {
-        name: 'Admin'
-      }
+        name: "Admin",
+      },
     });
   }
 
   Accounts.setPassword(user, password);
 
-  Meteor.users.update({
-    username: username
-  },{
-    $set:
+  Meteor.users.update(
+    {
+      username: username,
+    },
+    {
+      $set: {
+        "profile.admin": true,
+      },
+    }
+  );
+}
+
+function addServiceIntegration(service, config) {
+  if (config.enable) {
+    ServiceConfiguration.configurations.upsert(
       {
-        'profile.admin': true
+        service: service,
+      },
+      {
+        $set: {
+          clientId: config.clientId,
+          secret: config.secret,
+        },
       }
-  })
-}
-
-function addServiceIntegration(service, config){
-  if (config.enable){
-    ServiceConfiguration.configurations.upsert({
-      service: service
-    },{
-      $set: {
-        clientId: config.clientId,
-        secret: config.secret
-      }
-    });
+    );
   }
 }
 
-function addFacebookIntegration(fb){
-  if (fb.enable){
-    ServiceConfiguration.configurations.upsert({
-      service: 'facebook'
-    },{
-      $set: {
-        appId: fb.appId,
-        secret: fb.secret
+function addTwitterIntegration(twitter) {
+  if (twitter.enable) {
+    ServiceConfiguration.configurations.upsert(
+      {
+        service: "twitter",
+      },
+      {
+        $set: {
+          consumerKey: twitter.consumerKey,
+          secret: twitter.secret,
+        },
       }
-    });
+    );
   }
 }
 
-function setBasicSettings(config){
+function setBasicSettings(config) {
   // Check if the settings document already exists
   var settings = Settings.find({}).fetch();
-  if (settings.length == 0 || settings.length > 1){
+  if (settings.length == 0 || settings.length > 1) {
     // Remove all documents and then create the singular settings document.
     Settings.remove({});
     Settings.insert(config.settings);
@@ -121,35 +127,36 @@ function readConfigsFromEnv(template) {
         continue;
       }
       var value = template[key];
-      var upperCased = key.replace(
-        /([A-Z])/g,
-        function(c) { return '_' + c.toLowerCase(); }
-      ).toUpperCase();
+      var upperCased = key
+        .replace(/([A-Z])/g, function (c) {
+          return "_" + c.toLowerCase();
+        })
+        .toUpperCase();
       var elems = pathElems.concat([upperCased]);
-      var envName = elems.join('_');
+      var envName = elems.join("_");
       switch (typeof value) {
-        case 'object':
+        case "object":
           config[key] = rec(value, elems);
           break;
-        case 'string':
-          if (typeof process.env[envName] !== 'undefined') {
+        case "string":
+          if (typeof process.env[envName] !== "undefined") {
             config[key] = process.env[envName];
           }
           break;
-        case 'boolean':
+        case "boolean":
           var parsedBool = parseBool(process.env[envName]);
           if (parsedBool !== null) {
             config[key] = parsedBool;
           }
           break;
-        case 'number':
+        case "number":
           var parsedInt = parseInt(process.env[envName]);
           if (!isNaN(parsedInt)) {
             config[key] = parsedInt;
           }
           break;
         default:
-          throw 'unsupported type: ' + (typeof value);
+          throw "unsupported type: " + typeof value;
       }
     }
     return config;
@@ -176,7 +183,7 @@ function overlay(base, object) {
     if (!object.hasOwnProperty(key)) {
       continue;
     }
-    if (typeof object[key] === 'object' && typeof base[key] === 'object') {
+    if (typeof object[key] === "object" && typeof base[key] === "object") {
       overlay(base[key], object[key]);
     } else {
       base[key] = object[key];

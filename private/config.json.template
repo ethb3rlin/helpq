@@ -8,15 +8,10 @@
     "clientId": "github-client-id",
     "secret": "github-secret"
   },
-  "facebook": {
+  "twitter": {
     "enable": false,
-    "appId": "facebook-client-id",
-    "secret": "facebook-secret"
-  },
-  "google": {
-    "enable": false,
-    "clientId": "google-client-id",
-    "secret": "google-secret"
+    "consumerKey": "twitter-consumerKey",
+    "secret": "twitter-secret"
   },
   "settings": {
     "queueEnabled": true,
