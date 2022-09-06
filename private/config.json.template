@@ -17,5 +17,6 @@
     "queueEnabled": true,
     "expirationDelay": 3600000
   },
-  "defaultMentor": true
+  "defaultMentor": true,
+  "MAIL_URL": "smtp://USERNAME:PASSWORD@HOST:PORT"
 }

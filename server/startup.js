@@ -17,6 +17,8 @@ Meteor.startup(function () {
   var envConfigs = readConfigsFromEnv(configTemplate);
   overlay(config, envConfigs);
 
+  // Set the SMTP server
+  process.env.MAIL_URL = config.MAIL_URL;
   // Create the admin
   createAdmin(config.admin.username, config.admin.password);
 
